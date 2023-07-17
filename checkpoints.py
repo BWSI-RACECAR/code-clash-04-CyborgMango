@@ -33,7 +33,7 @@ class Solution:
             sortedcheckpoints=[]
             greatestdif=0
             for i in "a"*len(checkpoints):
-                min=0
+                min=10000000
                 for j in checkpoints:
                     if j<min:
                         min=j

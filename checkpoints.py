@@ -43,7 +43,7 @@ class Solution:
             for i in "a"*(len(sortedcheckpoints)-1):
                 iterable+=1
                 if abs(sortedcheckpoints[iterable-1]-sortedcheckpoints[iterable])>greatestdif:
-                    greatestdif=abs(sortedcheckpoints[i-1]-sortedcheckpoints[i])
+                    greatestdif=abs(sortedcheckpoints[iterable-1]-sortedcheckpoints[iterable])
             return greatest
 
 def main():

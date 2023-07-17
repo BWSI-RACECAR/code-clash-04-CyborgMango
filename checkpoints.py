@@ -44,7 +44,7 @@ class Solution:
                 iterable+=1
                 if abs(sortedcheckpoints[iterable-1]-sortedcheckpoints[iterable])>greatestdif:
                     greatestdif=abs(sortedcheckpoints[iterable-1]-sortedcheckpoints[iterable])
-            return greatest
+            return greatestdif
 
 def main():
     array = input().split(" ")

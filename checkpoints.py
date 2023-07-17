@@ -38,7 +38,7 @@ class Solution:
                 else:
                     othercheckpoints=[]
                 if i<len(checkpoints)-1:
-                    othercheckpoints.append(checkpoints[i:len(checkpoints-1)])
+                    othercheckpoints.append(checkpoints[i:len(checkpoints)-1])
                 for j in othercheckpoints:
                     if abs(checkpoints[i-1]-othercheckpoints[j-1])>greatest:
                         greatest=abs(checkpoints[i-1]-othercheckpoints[j-1])

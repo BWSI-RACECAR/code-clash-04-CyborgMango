@@ -32,9 +32,8 @@ class Solution:
     def longestdistance(self, checkpoints):
             greatest=0
             for i in checkpoints:
-                thingy=i
                 othercheckpoints=checkpoints
-                othercheckpoints-=i
+                othercheckpoints.remove(i)
                 for j in othercheckpoints:
                     if abs(i-j)>greatest:
                         greatest=abs(i-j)

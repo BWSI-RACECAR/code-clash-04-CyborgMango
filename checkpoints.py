@@ -32,7 +32,8 @@ class Solution:
     def longestdistance(self, checkpoints):
             sortedcheckpoints=[]
             greatestdif=0
-            for i in "a"*len(checkpoints):
+            iterable=0
+            for i in "1"*len(checkpoints):
                 min=10000000
                 for j in checkpoints:
                     if j<min:
@@ -40,7 +41,8 @@ class Solution:
                 sortedcheckpoints.append(min)
                 checkpoints.remove(min)
             for i in "a"*(len(sortedcheckpoints)-1):
-                if abs(sortedcheckpoints[i-1]-sortedcheckpoints[i])>greatestdif:
+                iterable+=1
+                if abs(sortedcheckpoints[iterable-1]-sortedcheckpoints[iterable])>greatestdif:
                     greatestdif=abs(sortedcheckpoints[i-1]-sortedcheckpoints[i])
             return greatest
 

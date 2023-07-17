@@ -32,16 +32,12 @@ class Solution:
     def longestdistance(self, checkpoints):
             greatest=0
             for i in checkpoints:
-                thingy=checkpoints[i-1]
-                if i>0:
-                    othercheckpoints=checkpoints[0:i-2]
-                else:
-                    othercheckpoints=[]
-                if i<len(checkpoints)-1:
-                    othercheckpoints.append(checkpoints[i:len(checkpoints)-1])
+                thingy=i
+                othercheckpoints=checkpoints
+                othercheckpoints-=i
                 for j in othercheckpoints:
-                    if abs(checkpoints[i-1]-othercheckpoints[j-1])>greatest:
-                        greatest=abs(checkpoints[i-1]-othercheckpoints[j-1])
+                    if abs(i-j)>greatest:
+                        greatest=abs(i-j)
             return greatest
 
 def main():
